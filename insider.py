@@ -90,7 +90,9 @@ def analyze_transcript(transcript, user_input):
         messages=[
             {"role": "system", "content": """You are a helpful assistant for our marketing team. 
              You will receive a transcript of a youtube video and a user query. The query is a list of concepts or terms that the user is interested in.
-             You need to find the most relevant parts of the transcript that are related to the user query and summarize them."""},
+             You need to find the most relevant parts of the transcript that are related to the user query and summarize them.
+             Also add the exact timestamps of the transcript to refer to the exact parts of the video if you are using the transcript in your summary.
+             """},
             {"role": "user", "content": f"""Here is a transcript: \n{transcript}\n 
              Can you summarize the ideas related to: {user_input}?"""}
         ]
