@@ -1,1 +1,2 @@
 selenium
+openai==0.28
